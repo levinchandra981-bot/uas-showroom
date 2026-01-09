@@ -1,0 +1,28 @@
+DEKLARASI
+    RECORD Mobil(kode, merk, model : string;
+                 tahun : integer;
+                 harga : long;
+                 tersedia : boolean)
+    daftarMobil : array of Mobil
+    pilihan : integer
+
+ALGORITMA
+    ULANGI
+        TAMPILKAN menu
+        INPUT pilihan
+
+        JIKA pilihan = 1
+            INPUT data mobil
+            tersedia ← TRUE
+            SIMPAN ke daftarMobil
+
+        JIKA pilihan = 2
+            UNTUK setiap mobil di daftarMobil
+                TAMPILKAN data dan status
+
+        JIKA pilihan = 3
+            INPUT kode
+            CARI mobil dengan kode tersebut
+            tersedia ← FALSE
+    SAMPAI pilihan = 0
+SELESAI
